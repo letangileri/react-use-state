@@ -7,18 +7,18 @@ export default function AppMain(){
 
     console.log(setCurrentTextId);
     
-    function handleClick(e){
-        console.log("ciao", e);
-        const currentlyClickedItem = e.target.getAttribute('data-id');
-        console.log(currentlyClickedItem);
-        setCurrentTextId(currentlyClickedItem);
+    function handleClick(id){
+        console.log("ciao", id);
+        // const currentlyClickedItem = e.target.getAttribute('data-id');
+        // console.log(currentlyClickedItem);
+        setCurrentTextId(id);
         
     }
     return(
         <>
         <div className="buttons">
         {languages.map(singleLanguage => (           
-            <button key = {singleLanguage.id} onClick={handleClick} data-id={singleLanguage.id}>{singleLanguage.title} </button>            
+            <button key = {singleLanguage.id} onClick={handleClick(singleLanguage.id)} data-id={singleLanguage.id}>{singleLanguage.title} </button>            
         ))}
         </div>
 
