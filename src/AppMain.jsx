@@ -7,6 +7,10 @@ export default function AppMain(){
 
     console.log(setCurrentTextId);
     
+    const idLanguage = languages[0].id;
+    const titleLanguage = languages[0].title;
+    const descriptionLanguage = languages[0].description;
+
     function handleClick(id){
         console.log("ciao", id);
         // const currentlyClickedItem = e.target.getAttribute('data-id');
@@ -22,18 +26,14 @@ export default function AppMain(){
         ))}
         </div>
 
-       {languages.map(singleLanguage => (
-            console.log(currentTextId),
-            console.log(singleLanguage.id),
-                
-            currentTextId == singleLanguage.id &&              
-                <div key={singleLanguage}>
-                    <h2>{singleLanguage.title}</h2>
-                    <p>{singleLanguage.description}</p>
-                </div> 
-            
+        {currentTextId == idLanguage &&              
+        <div key={idLanguage}>
+            <h2>{titleLanguage}</h2>
+            <p>{descriptionLanguage}</p>
+        </div> 
+        }
 
-       ))} 
+
 
         </>
     )
