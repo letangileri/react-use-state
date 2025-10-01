@@ -8,9 +8,7 @@ export default function AppMain(){
     console.log(setCurrentTextId);
     
 
-    const getLanguageId = languages.find(language => {
-        return currentTextId == language.id
-    })
+
 
     const idLanguage = languages[getLanguageId].id;
     const titleLanguage = languages[getLanguageId].title;
@@ -31,7 +29,9 @@ export default function AppMain(){
         ))}
         </div>
 
-
+        {const getLanguageId = languages.find(language => {
+        return currentTextId == language.id
+        })}
        {currentTextId == idLanguage &&              
         <div key={idLanguage}>
             <h2>{titleLanguage}</h2>
