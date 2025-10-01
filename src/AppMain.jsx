@@ -7,9 +7,14 @@ export default function AppMain(){
 
     console.log(setCurrentTextId);
     
-    const idLanguage = languages[currentTextId].id;
-    const titleLanguage = languages[currentTextId].title;
-    const descriptionLanguage = languages[currentTextId].description;
+
+    const getLanguageId = languages.find(language => {
+        return currentTextId == language.id
+    })
+
+    const idLanguage = languages[getLanguageId].id;
+    const titleLanguage = languages[getLanguageId].title;
+    const descriptionLanguage = languages[getLanguageId].description;
 
     function handleClick(id){
         console.log("ciao", id);
@@ -26,7 +31,8 @@ export default function AppMain(){
         ))}
         </div>
 
-        {currentTextId == idLanguage &&              
+
+       {currentTextId == idLanguage &&              
         <div key={idLanguage}>
             <h2>{titleLanguage}</h2>
             <p>{descriptionLanguage}</p>
