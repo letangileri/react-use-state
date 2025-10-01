@@ -18,7 +18,7 @@ export default function AppMain(){
         <>
         <div className="buttons">
         {languages.map(singleLanguage => (           
-            <button key = {singleLanguage.id} onClick={handleClick(singleLanguage.id)} data-id={singleLanguage.id}>{singleLanguage.title} </button>            
+            <button key = {singleLanguage.id} onClick={()=>handleClick(singleLanguage.id)} data-id={singleLanguage.id}>{singleLanguage.title} </button>            
         ))}
         </div>
 
