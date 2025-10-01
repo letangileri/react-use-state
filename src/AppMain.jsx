@@ -7,9 +7,9 @@ export default function AppMain(){
 
     console.log(setCurrentTextId);
     
-    const idLanguage = languages[0].id;
-    const titleLanguage = languages[0].title;
-    const descriptionLanguage = languages[0].description;
+    const idLanguage = languages[currentTextId].id;
+    const titleLanguage = languages[currentTextId].title;
+    const descriptionLanguage = languages[currentTextId].description;
 
     function handleClick(id){
         console.log("ciao", id);
