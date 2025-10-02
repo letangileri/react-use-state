@@ -7,12 +7,11 @@ export default function AppMain(){
 
     console.log(setCurrentTextId);
     
-
-
-
-    const idLanguage = languages[getLanguageId].id;
-    const titleLanguage = languages[getLanguageId].title;
-    const descriptionLanguage = languages[getLanguageId].description;
+    //cerca oggetto
+    const getObj = languages.find(language => {
+        return currentTextId == language.id
+    })
+    console.log(getObj.id);
 
     function handleClick(id){
         console.log("ciao", id);
@@ -25,17 +24,15 @@ export default function AppMain(){
         <>
         <div className="buttons">
         {languages.map(singleLanguage => (           
-            <button key = {singleLanguage.id} onClick={()=>handleClick(singleLanguage.id)} data-id={singleLanguage.id}>{singleLanguage.title} </button>            
+            <button key = {singleLanguage.id} onClick={()=>handleClick(singleLanguage.id)}>{singleLanguage.title} </button>            
         ))}
         </div>
 
-        {const getLanguageId = languages.find(language => {
-        return currentTextId == language.id
-        })}
-       {currentTextId == idLanguage &&              
-        <div key={idLanguage}>
-            <h2>{titleLanguage}</h2>
-            <p>{descriptionLanguage}</p>
+
+       {            
+        <div key={getObj.id}>
+            <h2>{getObj.title}</h2>
+            <p>{getObj.description}</p>
         </div> 
         }
 
