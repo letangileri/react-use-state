@@ -22,9 +22,11 @@ export default function AppMain(){
         // console.log(currentlyClickedItem);
         setCurrentTextId(id);
         console.log(currentTextId);
+        
         setActive(!active);
         
     }
+
     return(
         <>
         <div className="buttons">
@@ -34,7 +36,7 @@ export default function AppMain(){
         </div>
 
 
-       {currentTextId == 0 ? <p> Nessun linguaggio selezionato </p> :         
+       {!getObj && currentTextId == 0 ? <p> Nessun linguaggio selezionato </p> :         
         <div key={getObj.id}>
             <h2>{getObj.title}</h2>
             <p>{getObj.description}</p>
