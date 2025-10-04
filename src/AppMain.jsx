@@ -3,6 +3,27 @@ import { useState } from "react";
 
 export default function AppMain(){
 
+    function MyComponent() {
+        const [stateCount, setStateCount] = useState(0)
+        let varCount = 0;
+      
+        console.log("COMPONENTE ESEGUITO!", stateCount, varCount)
+      
+        function handleClick() {
+          setStateCount(stateCount+1)
+          varCount++
+        }
+        return <div>
+          <button onClick={handleClick}>Click me, {stateCount}, {varCount}</button>
+        </div>
+      }
+
+
+
+
+
+
+
     const [currentTextId, setCurrentTextId] = useState(0);
     const [active, setActive] = useState(false);
 
@@ -11,6 +32,8 @@ export default function AppMain(){
     
     //cerca oggetto
     const getObj = languages.find(language => {
+        console.log(currentTextId);
+        
         return currentTextId == language.id
     })
     // console.log(getObj.id);

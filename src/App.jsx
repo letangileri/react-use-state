@@ -10,6 +10,8 @@ function App() {
       <AppHeader/>
       <AppMain/>
       {/* <AppFooter/> */}
+      <MyComponent/>
+        <div className="buttons"></div>
       </>
   )
 }
