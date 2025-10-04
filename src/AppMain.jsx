@@ -17,19 +17,6 @@ export default function AppMain(){
     })
 
 
-
-
-        const [stateCount, setStateCount] = useState(0)
-        let varCount = 0;
-      
-        console.log("COMPONENTE ESEGUITO!", stateCount, varCount)
-      
-        function handleClick() {
-          setStateCount(stateCount+1)
-          varCount++
-        }
-
-
     // console.log(getObj.id);
 
     function handleClick(id){
@@ -46,7 +33,7 @@ export default function AppMain(){
 
     return(
         <>
-        {/* <div className="buttons">
+        <div className="buttons">
         {languages.map(singleLanguage => (           
             <button key = {singleLanguage.id} onClick={()=>handleClick(singleLanguage.id)} style={{ backgroundColor: active && currentTextId == singleLanguage.id ? "yellow" : "white" }}>{singleLanguage.title} </button>            
         ))}
@@ -58,11 +45,9 @@ export default function AppMain(){
             <h2>{getObj.title}</h2>
             <p>{getObj.description}</p>
         </div> 
-        } */}
+        }
 
-    <div>
-      <button onClick={handleClick}>Click me, {stateCount}, {varCount}</button>
-    </div>
+
 
 
 

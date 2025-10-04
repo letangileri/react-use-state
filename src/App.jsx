@@ -1,6 +1,7 @@
 import AppHeader from './AppHeader'
 import AppMain from './AppMain'
 // import AppFooter from './AppFooter'
+import AppCount from './AppCount'
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <AppHeader/>
       <AppMain/>
       {/* <AppFooter/> */}
-
+      <AppCount/>
       </>
   )
 }
